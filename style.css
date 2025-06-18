@@ -1,0 +1,235 @@
+/* Reset */
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fixed Navbar */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height:80px;
+  background-color: #ff9;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Nav links */
+nav a {
+  text-decoration: none;
+  color: #111;
+  margin-left: 2rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+  opacity: 0.5;
+}
+
+/* Fullscreen welcome section */
+#welcome {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 40px; /* keeps navbar spacing */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); /* pulls section out of body centering */
+  padding: 0;
+}
+
+#welcome img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+#welcome p {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  max-width: 80%;
+  line-height: 1.4;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 230px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.8rem;
+  color: white;
+  animation: bounce 2s infinite;
+  z-index: 2;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  background-color: #f4f4f4;
+  color: #111;
+  padding: 40px 2rem 0; /* Top padding accounts for navbar */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: #111;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+
+p {
+  margin-bottom: 1.2em;
+}
+
+#history {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  text-align: justify;
+}
+
+#history-text {
+
+}
+
+/* Staff bios */
+#staff .staff-member {
+  margin-bottom: 2.5rem;
+}
+
+#staff em {
+  color: #555;
+}
+
+.bio-card {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  height: 240px;
+}
+
+
+.bio-card img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+.bio-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bio-content h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.2rem;
+}
+
+.bio-content em {
+  color: #666;
+  display: block;
+  margin-bottom: 0.8rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+footer {
+  padding: 2rem 0;
+  border-top: 1px solid #e5e5e5;
+  font-size: 0.9rem;
+  color: #999;
+  width: 100vw;
+  background-color: #000;
+  text-align: center;
+  margin-top: 4rem;
+  margin-left: calc(-50vw + 50%); /* pulls section out of body centering */
+  margin-bottom: 0;
+  font-family: 'Playfair Display', serif;
+}
+
+footer nav {
+  margin-bottom: 1rem;
+}
+
+footer nav a {
+  color: #999;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: opacity 0.2s ease;
+  font-weight: normal;
+}
+
+footer nav a:hover {
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin: 0.5rem 0 0 0;
+    display: block;
+  }
+}
