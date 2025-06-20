@@ -156,7 +156,7 @@ p {
   overflow: hidden;
   margin-bottom: 3rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-  height: 240px;
+  height: 360px;
 }
 
 
@@ -168,7 +168,7 @@ p {
 }
 
 .bio-content {
-  padding: 1.5rem;
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -182,7 +182,7 @@ p {
 .bio-content em {
   color: #666;
   display: block;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.3rem;
   font-style: normal;
   font-weight: 600;
 }
